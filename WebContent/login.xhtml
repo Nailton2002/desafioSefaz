@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+
+</h:head>
+
+<h:body>
+
+<h:form>
+		<p:breadCrumb>
+			<p:menuitem />
+			<p:menuitem value="Crie sua conta Sefaz" action="Crie sua conta Sefaz"/>
+		</p:breadCrumb>
+	</h:form>
+	
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+	<center>
+		<h:form>
+			<p:messages id="messages" />
+			<p:panelGrid columns="2">
+
+			<p:outputLabel>Login:</p:outputLabel>
+			<p:inputText value="#{usuarioPessoaManagedBean.usuarioPessoa.login}" 
+			             required="true" requiredMessage="Informe o login"/>
+
+			<p:outputLabel>Senha:</p:outputLabel>
+			<p:password value="#{usuarioPessoaManagedBean.usuarioPessoa.senha}" 
+			            required="true" requiredMessage="Informe a senha!"/>
+
+			<p:outputLabel>Nome:</p:outputLabel>
+			<p:inputText value="#{usuarioPessoaManagedBean.usuarioPessoa.nome}"
+				         required="true" requiredMessage="Informe o nome!" />
+
+			<p:outputLabel>Email:</p:outputLabel>
+			<p:inputText value="#{usuarioPessoaManagedBean.usuarioPessoa.email}" 
+			 required="true" requiredMessage="Informe o e-mail"/>
+				
+			</p:panelGrid>
+			
+			<p:commandButton value="Cadastrar" icon="ui-icon-star"
+					action="#{usuarioPessoaManagedBean.cadastrar}"  ajax="false" >
+				</p:commandButton>
+		</h:form>
+	</center>
+</h:body>
+</html>
